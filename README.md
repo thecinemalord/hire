@@ -2,23 +2,25 @@
 
 A single-page personal site. Plain HTML — no build step, no dependencies.
 
-## Files
+## Files (keep ALL of these together in the repo root)
 - `index.html` — the site
-- `resume.pdf` — the résumé the "Download résumé" buttons link to
+- `resume.pdf` — linked by the "Download résumé" buttons
+- `crescent-harbor-memo.pdf` — work sample: investment committee memo
+- `crescent-harbor-deck.pdf` — work sample: IC deck
+- `crescent-harbor-model.xlsx` — work sample: the underlying Excel model
 
-**Keep both files together in the repo root.** The download buttons point to
-`resume.pdf`, so the PDF must sit next to `index.html`.
+Every download button points to a file by name, so all files must sit
+next to `index.html` in the repo root.
 
 ## Put it on GitHub + Vercel
-
 1. Create a new repository on GitHub (e.g. `portfolio`).
-2. Upload **both** `index.html` and `resume.pdf` to the repo
-   (drag them into GitHub's "Add file → Upload files", or push with git).
-3. Go to https://vercel.com → **Add New → Project** → import the repo.
+2. Upload **all** the files above to the repo root
+   ("Add file → Upload files", or push with git).
+3. On https://vercel.com → **Add New → Project** → import the repo.
 4. Framework preset: **Other**. Leave build & output settings empty.
-5. Click **Deploy**. Done — your site is live.
+5. **Deploy**. Your site is live.
 
-## Updating your résumé later
-Replace `resume.pdf` in the repo with your new file, but **keep the name
-`resume.pdf`**. The download link never changes, so it keeps working.
-(The file downloads for visitors as `Tanmay_Srivastava_2026_Resume.pdf`.)
+## Updating files later
+Replace a file in the repo but keep the same filename, and its link
+keeps working. (The résumé downloads for visitors as
+`Tanmay_Srivastava_2026_Resume.pdf`.)

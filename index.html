@@ -83,6 +83,35 @@
   .subhead{color:var(--mute);font-size:.98rem;margin-bottom:44px;max-width:60ch}
   .divide{border-top:1px solid var(--line)}
 
+  /* featured case study */
+  #casestudy{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cs-flag{font-family:"JetBrains Mono",monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  .cs-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:start;padding-top:34px}
+  .cs-lead .deal{font-family:"Fraunces",serif;font-size:1.6rem;font-weight:500;line-height:1.25;margin-bottom:6px}
+  .cs-lead .sub{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--mute);letter-spacing:.02em;margin-bottom:20px}
+  .cs-lead p{color:var(--soft);font-size:.98rem;line-height:1.8}
+  .cs-lead p+p{margin-top:13px}
+  .cs-lead p b{color:var(--paper);font-weight:500}
+  .cs-lead .note{margin-top:16px;font-family:"JetBrains Mono",monospace;font-size:.64rem;color:var(--dim);line-height:1.6}
+  .cs-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+  .cs-tags span{font-family:"JetBrains Mono",monospace;font-size:.6rem;color:var(--soft);border:1px solid var(--line);border-radius:5px;padding:5px 9px;text-transform:uppercase;letter-spacing:.04em}
+  /* key metrics panel */
+  .cs-metrics{border:1px solid var(--line);border-radius:14px;background:var(--ink);overflow:hidden}
+  .cs-metrics .mrow{display:grid;grid-template-columns:1fr 1fr}
+  .cs-metrics .m{padding:18px 20px;border-bottom:1px solid var(--line)}
+  .cs-metrics .m:nth-child(odd){border-right:1px solid var(--line)}
+  .cs-metrics .mv{font-family:"Fraunces",serif;font-weight:500;font-size:1.7rem;line-height:1;color:var(--accent)}
+  .cs-metrics .mk{font-family:"JetBrains Mono",monospace;font-size:.58rem;letter-spacing:.05em;text-transform:uppercase;color:var(--mute);margin-top:8px}
+  .cs-rec{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .cs-rec .lab{font-family:"JetBrains Mono",monospace;font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+  .cs-rec .val{font-family:"Fraunces",serif;font-style:italic;font-size:1.05rem;color:var(--gold)}
+  .cs-downloads{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .csbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 16px;font-size:.82rem;font-weight:500;border-radius:8px;border:1px solid var(--line);color:var(--paper);transition:all .2s}
+  .csbtn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+  .csbtn .ext{font-family:"JetBrains Mono",monospace;font-size:.62rem;color:var(--mute)}
+  .csbtn:hover .ext{color:var(--accent)}
+  @media(max-width:820px){.cs-grid{grid-template-columns:1fr;gap:32px}}
+
   .about{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:start;padding-top:40px}
   .about .lead{font-family:"Fraunces",serif;font-size:1.55rem;line-height:1.42;color:var(--paper);margin-bottom:20px;font-weight:400}
   .about .lead em{font-style:italic;color:var(--accent)}
@@ -186,6 +215,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#exp">Experience</a></li>
+      <li><a href="#casestudy">Work Sample</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#awards">Awards</a></li>
     </ul>
@@ -210,6 +240,7 @@
         </div>
         <div class="cta reveal">
           <a class="btn btn-fill" href="mailto:srivasta@mail.uc.edu?subject=Opportunity%20for%20Tanmay">Let's talk →</a>
+          <a class="btn btn-line" href="#casestudy">Featured work sample →</a>
           <a class="btn btn-line" href="resume.pdf" download="Tanmay_Srivastava_2026_Resume.pdf">Download résumé ↓</a>
         </div>
       </div>
@@ -342,6 +373,39 @@
             <li>Delivered distribution insights and content classification analysis for media-client research engagements.</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="casestudy">
+  <div class="wrap">
+    <div class="head reveal"><h2>Featured <em>work sample</em></h2></div>
+    <p class="subhead reveal">A full underwriting I built end to end — model, memo, and committee deck — for a media &amp; entertainment private-credit facility.</p>
+    <div class="cs-grid">
+      <div class="cs-lead reveal">
+        <div class="cs-flag">Media &amp; Entertainment · Private Credit</div>
+        <div class="deal">Crescent Harbor Media Holdings — $75M senior secured facility</div>
+        <div class="sub">Investment Committee underwriting · library-backed borrowing base</div>
+        <p>I underwrote a <b>$75.0M first-lien unitranche facility</b> secured against a film and TV library, tax credits, and international pre-sales — the kind of structured deal that sits squarely between media and finance.</p>
+        <p>The work runs the full stack: a discounted-cash-flow <b>library valuation</b>, <b>borrowing-base mechanics</b> with advance rates and haircuts, a <b>debt-service schedule</b> and covenant package, plus <b>sensitivity, scenario, and recovery analysis</b>. The recommendation — <b>Approve with Conditions</b> — turns on downside borrowing-base coverage of 0.97x and a modeled maturity refinancing gap, not headline pricing.</p>
+        <div class="cs-tags"><span>Financial modeling</span><span>Credit underwriting</span><span>DCF valuation</span><span>Scenario analysis</span><span>Covenant design</span><span>Excel</span></div>
+        <p class="note">Illustrative transaction — Crescent Harbor is a fictional entity and all figures are constructed for modeling demonstration. Public market references are cited to source.</p>
+        <div class="cs-downloads">
+          <a class="csbtn" href="crescent-harbor-memo.pdf" target="_blank" rel="noopener">Read the memo <span class="ext">PDF · 20pp</span></a>
+          <a class="csbtn" href="crescent-harbor-deck.pdf" target="_blank" rel="noopener">View the IC deck <span class="ext">PDF</span></a>
+          <a class="csbtn" href="crescent-harbor-model.xlsx" download>Download the model <span class="ext">XLSX</span></a>
+        </div>
+      </div>
+      <div class="cs-metrics reveal">
+        <div class="mrow">
+          <div class="m"><div class="mv">$75.0M</div><div class="mk">Facility size</div></div>
+          <div class="m"><div class="mv">1.23x</div><div class="mk">Borrowing-base coverage</div></div>
+          <div class="m"><div class="mv">42.0%</div><div class="mk">Loan-to-value</div></div>
+          <div class="m"><div class="mv">8.23%</div><div class="mk">Expected net yield</div></div>
+        </div>
+        <div class="cs-rec"><span class="lab">Recommendation</span><span class="val">Approve with conditions</span></div>
+        <div class="cs-rec" style="border-top:1px solid var(--line)"><span class="lab">Credit score</span><span class="val">3.22 / 5.00 · Watch</span></div>
       </div>
     </div>
   </div>
