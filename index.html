@@ -148,6 +148,57 @@
   .bb-cov .n{font-family:"Fraunces",serif;font-size:2rem;color:var(--accent);line-height:1}
   .bb-cov .l{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin-top:6px}
   @media(max-width:820px){.bb-wrap{grid-template-columns:1fr;gap:24px}.bb-panel{position:static}.bb-row{grid-template-columns:96px 1fr}}
+
+  /* case-study separator + numbering (multiple samples) */
+  .cs-item{padding-top:20px}
+  .cs-item+.cs-item{margin-top:14px;border-top:1px solid var(--line);padding-top:52px}
+  .cs-kicker{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:18px}
+  .cs-kicker b{color:var(--accent)}
+
+  /* ---- widget 2: US vs Korea comparison toggle ---- */
+  .cmp{margin-top:44px;border-top:1px solid var(--line);padding-top:36px}
+  .cmp-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .cmp-head h3{font-family:"Fraunces",serif;font-weight:500;font-size:1.35rem}
+  .cmp-head h3 em{font-style:italic;color:var(--accent)}
+  .cmp-sub{color:var(--mute);font-size:.9rem;margin-bottom:24px;max-width:64ch}
+  .cmp-toggle{display:inline-flex;background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:4px;margin-bottom:26px}
+  .cmp-toggle button{font-family:"Inter",sans-serif;font-size:.86rem;font-weight:500;color:var(--soft);background:transparent;border:none;padding:9px 22px;border-radius:7px;cursor:pointer;transition:all .25s}
+  .cmp-toggle button.on{color:var(--ink);font-weight:600}
+  .cmp-toggle button.on[data-mkt="us"]{background:var(--accent)}
+  .cmp-toggle button.on[data-mkt="kr"]{background:#a874e8}
+  .cmp-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cmp-card{border:1px solid var(--line);border-radius:12px;background:var(--ink);padding:22px;transition:border-color .3s}
+  .cmp-card .lab{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
+  .cmp-card .big{font-family:"Fraunces",serif;font-size:2rem;line-height:1;color:var(--accent);transition:color .3s}
+  .cmp-card .desc{font-size:.84rem;color:var(--soft);margin-top:10px;line-height:1.5}
+  .cmp-bars{margin-top:22px}
+  .cmp-bars .brow{display:grid;grid-template-columns:150px 1fr 52px;gap:12px;align-items:center;padding:7px 0}
+  .cmp-bars .blab{font-size:.8rem;color:var(--soft);text-align:right}
+  .cmp-bars .btrack{height:22px;background:var(--ink);border:1px solid var(--line);border-radius:5px;overflow:hidden}
+  .cmp-bars .bfill{height:100%;border-radius:4px 0 0 4px;transition:width .6s cubic-bezier(.3,.7,.2,1),background .3s}
+  .cmp-bars .bval{font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--paper)}
+  .cmp-tt{font-family:"JetBrains Mono",monospace;font-size:.62rem;color:var(--mute);margin-top:14px;letter-spacing:.03em}
+
+  /* ---- widget 3: impulse-response scrubber ---- */
+  .irf{margin-top:44px;border-top:1px solid var(--line);padding-top:36px}
+  .irf-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .irf-head h3{font-family:"Fraunces",serif;font-weight:500;font-size:1.35rem}
+  .irf-head h3 em{font-style:italic;color:var(--accent)}
+  .irf-sub{color:var(--mute);font-size:.9rem;margin-bottom:24px;max-width:64ch}
+  .irf-wrap{display:grid;grid-template-columns:1fr 260px;gap:30px;align-items:start}
+  .irf-chart{border:1px solid var(--line);border-radius:12px;background:var(--ink);padding:16px 16px 8px}
+  #irfSvg{width:100%;height:230px;display:block;overflow:visible}
+  .irf-slider{margin-top:14px;display:flex;align-items:center;gap:12px}
+  .irf-slider input{flex:1;accent-color:var(--accent)}
+  .irf-slider .mo{font-family:"JetBrains Mono",monospace;font-size:.7rem;color:var(--accent);white-space:nowrap;min-width:70px}
+  .irf-panel{border:1px solid var(--line);border-radius:12px;background:var(--ink);padding:20px}
+  .irf-panel .pt{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+  .irf-panel .resp{font-family:"Fraunces",serif;font-size:2.2rem;color:var(--accent);line-height:1}
+  .irf-panel .respk{font-family:"JetBrains Mono",monospace;font-size:.6rem;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;margin-top:6px;margin-bottom:18px}
+  .irf-panel .prow{display:flex;justify-content:space-between;padding:9px 0;border-top:1px solid var(--line);font-size:.82rem}
+  .irf-panel .prow .l{color:var(--mute)}
+  .irf-panel .prow .v{color:var(--paper);font-family:"JetBrains Mono",monospace}
+  @media(max-width:820px){.cmp-wrap{grid-template-columns:1fr}.irf-wrap{grid-template-columns:1fr;gap:22px}.cmp-bars .brow{grid-template-columns:120px 1fr 48px}}
   .csbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 16px;font-size:.82rem;font-weight:500;border-radius:8px;border:1px solid var(--line);color:var(--paper);transition:all .2s}
   .csbtn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
   .csbtn .ext{font-family:"JetBrains Mono",monospace;font-size:.62rem;color:var(--mute)}
@@ -422,8 +473,11 @@
 
 <section id="casestudy">
   <div class="wrap">
-    <div class="head reveal"><h2>Featured <em>work sample</em></h2></div>
-    <p class="subhead reveal">A full underwriting I built end to end — model, memo, and committee deck — for a media &amp; entertainment private-credit facility.</p>
+    <div class="head reveal"><h2>Selected <em>work samples</em></h2></div>
+    <p class="subhead reveal">Three deliverables I built end to end — a private-credit underwriting, a cross-country box-office regression study, and a macro time-series analysis. Each with the model, the write-up, and something you can explore below.</p>
+
+    <div class="cs-item">
+    <div class="cs-kicker reveal"><b>01</b> · Media &amp; Entertainment Private Credit</div>
     <div class="cs-grid">
       <div class="cs-lead reveal">
         <div class="cs-flag">Media &amp; Entertainment · Private Credit</div>
@@ -483,6 +537,120 @@
       </div>
       <p class="cs-lead note" style="margin-top:22px">Figures from the underwriting model. Illustrative transaction — fictional entity.</p>
     </div>
+    </div>
+
+    <div class="cs-item">
+    <div class="cs-kicker reveal"><b>02</b> · Applied Econometrics · Cross-Country</div>
+    <div class="cs-grid">
+      <div class="cs-lead reveal">
+        <div class="cs-flag">Media Economics · Regression Study</div>
+        <div class="deal">Determinants of Box Office Revenue — US vs South Korea</div>
+        <div class="sub">Parallel OLS models · 646 films · 2020–2025</div>
+        <p>I built parallel regression models for two very different film markets to answer one question: <b>what actually drives theatrical revenue</b> — and does the answer travel across borders?</p>
+        <p>The finding is a clean contrast. In the <b>US, budget is the engine</b> — every extra $1M lifts revenue ~$771K, and action films convert it best. In <b>Korea, screens are the story</b> — distribution reach (t = 60.2) dwarfs everything else. Same global shock, two different mechanics, because market <b>structure</b> — producer-driven vs. exhibitor-driven — decides what matters.</p>
+        <div class="cs-tags"><span>OLS regression</span><span>Cross-country</span><span>Genre × budget</span><span>R</span><span>Box Office Mojo · KOBIS</span></div>
+        <p class="note">Prepared as an analytical work sample · Data: Box Office Mojo (US) and KOFIC/KOBIS (South Korea).</p>
+        <div class="cs-downloads">
+          <a class="csbtn" href="box-office-us-korea-deck.pdf" target="_blank" rel="noopener">View the deck <span class="ext">PDF · 10pp</span></a>
+        </div>
+      </div>
+      <div class="cs-metrics reveal">
+        <div class="mrow">
+          <div class="m"><div class="mv">646</div><div class="mk">Films analyzed</div></div>
+          <div class="m"><div class="mv">2</div><div class="mk">Markets compared</div></div>
+          <div class="m"><div class="mv">0.38</div><div class="mk">US model R²</div></div>
+          <div class="m"><div class="mv">0.44</div><div class="mk">Korea model R²</div></div>
+        </div>
+        <div class="cs-rec"><span class="lab">US · main driver</span><span class="val">Budget</span></div>
+        <div class="cs-rec" style="border-top:1px solid var(--line)"><span class="lab">Korea · main driver</span><span class="val">Screens</span></div>
+      </div>
+    </div>
+
+    <div class="cmp reveal">
+      <div class="cmp-head">
+        <h3>Two markets, <em>two different engines</em></h3>
+        <span class="hint" id="cmpHint">Toggle a market →</span>
+      </div>
+      <p class="cmp-sub">The same regression framework, run on each market, surfaces completely different drivers. Switch between them and watch what moves revenue — and how strong the statistical evidence is.</p>
+      <div class="cmp-toggle" id="cmpToggle">
+        <button data-mkt="us" class="on">United States</button>
+        <button data-mkt="kr">South Korea</button>
+      </div>
+      <div class="cmp-wrap">
+        <div class="cmp-card">
+          <div class="lab">Primary driver</div>
+          <div class="big" id="cmpDriver">Budget</div>
+          <div class="desc" id="cmpDriverDesc">Producer-driven market — production scale dominates revenue.</div>
+        </div>
+        <div class="cmp-card">
+          <div class="lab" id="cmpEffLab">Effect size</div>
+          <div class="big" id="cmpEff">+$771K</div>
+          <div class="desc" id="cmpEffDesc">Revenue per additional $1M of budget (p&lt;0.001).</div>
+        </div>
+      </div>
+      <div class="cmp-bars">
+        <div class="brow"><span class="blab">Model R²</span><div class="btrack"><div class="bfill" id="barR2"></div></div><span class="bval" id="valR2">0.38</span></div>
+        <div class="brow"><span class="blab">Driver t-stat</span><div class="btrack"><div class="bfill" id="barT"></div></div><span class="bval" id="valT">5.4</span></div>
+      </div>
+      <p class="cmp-tt" id="cmpNote">US: budget is significant but variable — genuine box-office uncertainty. Genre matters (action converts budget best).</p>
+    </div>
+    </div>
+
+    <div class="cs-item">
+    <div class="cs-kicker reveal"><b>03</b> · Time-Series Macroeconometrics</div>
+    <div class="cs-grid">
+      <div class="cs-lead reveal">
+        <div class="cs-flag">Macro Analysis · VAR / VECM</div>
+        <div class="deal">Macroeconomic Determinants of Box Office Revenue</div>
+        <div class="sub">Dynamic regression · VAR · Johansen cointegration · VECM · 2000–2025</div>
+        <p>Does the macro economy move the box office? I tested it with a full time-series stack — <b>dynamic regression, a three-variable VAR, and a VECM</b> — on 300+ monthly observations of box office, consumer spending (PCE), and the fed funds rate.</p>
+        <p>The result is subtle and it's the interesting part: box office is <b>macro-sensitive in the short run but macro-independent in its correction</b>. A consumption shock lifts revenue immediately, then fades. But when the system drifts from equilibrium, it's the <b>broad economy that adjusts, not the film industry</b> — ~87% of box-office variance is its own idiosyncratic dynamics.</p>
+        <div class="cs-tags"><span>VAR / VECM</span><span>Johansen cointegration</span><span>Impulse response</span><span>Granger causality</span><span>R</span></div>
+        <p class="note">Analytical work sample · 312 monthly observations, estimated in R. Figures reconstructed for presentation; estimates unchanged.</p>
+        <div class="cs-downloads">
+          <a class="csbtn" href="box-office-macro-analysis.pdf" target="_blank" rel="noopener">Read the report <span class="ext">PDF · 11pp</span></a>
+        </div>
+      </div>
+      <div class="cs-metrics reveal">
+        <div class="mrow">
+          <div class="m"><div class="mv">+0.30</div><div class="mk">Peak PCE-shock response</div></div>
+          <div class="m"><div class="mv">~87%</div><div class="mk">Own-shock variance share</div></div>
+          <div class="m"><div class="mv">1</div><div class="mk">Cointegrating vector</div></div>
+          <div class="m"><div class="mv">312</div><div class="mk">Monthly obs · 2000–25</div></div>
+        </div>
+        <div class="cs-rec"><span class="lab">PCE → box office</span><span class="val">Strong</span></div>
+        <div class="cs-rec" style="border-top:1px solid var(--line)"><span class="lab">Fed funds → box office</span><span class="val">Weak</span></div>
+      </div>
+    </div>
+
+    <div class="irf reveal">
+      <div class="irf-head">
+        <h3>Trace a <em>consumption shock</em> through the box office</h3>
+        <span class="hint">Drag the horizon →</span>
+      </div>
+      <p class="irf-sub">This is the VAR impulse response: a one-standard-deviation shock to consumer spending hits box-office revenue, peaks fast, then decays back to baseline within about six months. Scrub the timeline to read the response at each horizon.</p>
+      <div class="irf-wrap">
+        <div>
+          <div class="irf-chart"><svg id="irfSvg" viewBox="0 0 460 230" preserveAspectRatio="none"></svg></div>
+          <div class="irf-slider">
+            <input type="range" id="irfRange" min="0" max="12" value="1" step="1">
+            <span class="mo" id="irfMo">Month 1</span>
+          </div>
+        </div>
+        <div class="irf-panel">
+          <div class="pt">Box-office response</div>
+          <div class="resp" id="irfResp">+0.30</div>
+          <div class="respk">at month <span id="irfMoK">1</span> (peak)</div>
+          <div class="prow"><span class="l">Shock</span><span class="v">+1σ PCE</span></div>
+          <div class="prow"><span class="l">Peak response</span><span class="v">+0.30 · mo 1</span></div>
+          <div class="prow"><span class="l">Half-life</span><span class="v">~3 months</span></div>
+          <div class="prow"><span class="l">Back to baseline</span><span class="v">~6 months</span></div>
+        </div>
+      </div>
+      <p class="cs-lead note" style="margin-top:22px">Response path reconstructed from the VAR impulse-response function. Analytical work sample.</p>
+    </div>
+    </div>
+
   </div>
 </section>
 
@@ -641,6 +809,96 @@
     });
     // touch / click support for mobile
     rows.forEach(function(r){ r.addEventListener('click',function(){ activate(+r.dataset.i); }); });
+  })();
+
+  /* ---- widget 2: US vs Korea comparison toggle ---- */
+  (function(){
+    var toggle=document.getElementById('cmpToggle');
+    if(!toggle) return;
+    var D={
+      us:{ driver:'Budget', driverDesc:'Producer-driven market — production scale dominates revenue.',
+           effLab:'Effect size', eff:'+$771K', effDesc:'Revenue per additional $1M of budget (p<0.001).',
+           r2:0.38, t:5.4, accent:'#4ea3a8',
+           note:'US: budget is significant but variable — genuine box-office uncertainty. Genre matters (action converts budget best, +$424K per $1M).' },
+      kr:{ driver:'Screens', driverDesc:'Exhibitor-driven market — distribution reach dominates revenue.',
+           effLab:'Effect size', eff:'+8.56M', effDesc:'KRW of expected revenue per additional screen (t = 60.2).',
+           r2:0.44, t:60.2, accent:'#a874e8',
+           note:'Korea: the screen effect is in a different league of statistical strength. Genre and interaction terms mostly drop out — access to screens beats genre-specific spend.' }
+    };
+    var el=function(id){return document.getElementById(id);};
+    var maxT=60.2;
+    function set(mkt){
+      var d=D[mkt];
+      el('cmpDriver').textContent=d.driver; el('cmpDriver').style.color=d.accent;
+      el('cmpDriverDesc').textContent=d.driverDesc;
+      el('cmpEffLab').textContent=d.effLab; el('cmpEff').textContent=d.eff; el('cmpEff').style.color=d.accent;
+      el('cmpEffDesc').textContent=d.effDesc;
+      el('valR2').textContent=d.r2.toFixed(2);
+      el('valT').textContent=d.t;
+      var r2b=el('barR2'), tb=el('barT');
+      r2b.style.width=(d.r2/0.5*100)+'%'; r2b.style.background=d.accent;
+      tb.style.width=(d.t/maxT*100)+'%'; tb.style.background=d.accent;
+      el('cmpNote').textContent=d.note;
+      toggle.querySelectorAll('button').forEach(function(b){b.classList.toggle('on', b.dataset.mkt===mkt);});
+    }
+    toggle.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click',function(){ set(b.dataset.mkt); });
+    });
+    set('us');
+  })();
+
+  /* ---- widget 3: impulse-response scrubber ---- */
+  (function(){
+    var svg=document.getElementById('irfSvg');
+    if(!svg) return;
+    var range=document.getElementById('irfRange');
+    // VAR IRF path: box-office response to +1sigma PCE shock, months 0..12
+    var Y=[0,0.30,0.12,-0.05,-0.10,-0.04,0.01,0.02,0.01,0.005,0.002,0.001,0];
+    var NS="http://www.w3.org/2000/svg", W=460,H=230, padL=34,padR=12,padT=14,padB=26;
+    var ymin=-0.15, ymax=0.34;
+    var X=function(i){return padL+(i/12)*(W-padL-padR);};
+    var Yc=function(v){return padT+(1-(v-ymin)/(ymax-ymin))*(H-padT-padB);};
+    // build
+    svg.innerHTML='<defs><linearGradient id="irfF" x1="0" y1="0" x2="0" y2="1">'+
+      '<stop offset="0" stop-color="#4ea3a8" stop-opacity=".28"/><stop offset="1" stop-color="#4ea3a8" stop-opacity="0"/></linearGradient></defs>';
+    // zero line
+    var z=document.createElementNS(NS,'line'); z.setAttribute('x1',padL);z.setAttribute('x2',W-padR);
+    z.setAttribute('y1',Yc(0));z.setAttribute('y2',Yc(0));z.setAttribute('stroke','rgba(174,184,196,.25)');z.setAttribute('stroke-dasharray','3 3');svg.appendChild(z);
+    // gridlines + y labels
+    [0.3,0.15,0,-0.1].forEach(function(v){
+      var t=document.createElementNS(NS,'text');t.setAttribute('x',padL-6);t.setAttribute('y',Yc(v)+3);
+      t.setAttribute('text-anchor','end');t.setAttribute('fill','#6d7887');t.setAttribute('font-size','8');t.setAttribute('font-family','JetBrains Mono, monospace');
+      t.textContent=(v>0?'+':'')+v.toFixed(2);svg.appendChild(t);
+    });
+    function pathD(close){
+      var d='M '+X(0)+' '+Yc(Y[0]);
+      for(var i=1;i<Y.length;i++){var cx=(X(i-1)+X(i))/2;
+        d+=' C '+cx+' '+Yc(Y[i-1])+', '+cx+' '+Yc(Y[i])+', '+X(i)+' '+Yc(Y[i]);}
+      if(close) d+=' L '+X(12)+' '+Yc(0)+' L '+X(0)+' '+Yc(0)+' Z';
+      return d;
+    }
+    var area=document.createElementNS(NS,'path');area.setAttribute('d',pathD(true));area.setAttribute('fill','url(#irfF)');svg.appendChild(area);
+    var line=document.createElementNS(NS,'path');line.setAttribute('d',pathD(false));line.setAttribute('fill','none');
+    line.setAttribute('stroke','#4ea3a8');line.setAttribute('stroke-width','2');line.setAttribute('stroke-linecap','round');svg.appendChild(line);
+    // x labels
+    [0,3,6,9,12].forEach(function(i){
+      var t=document.createElementNS(NS,'text');t.setAttribute('x',X(i));t.setAttribute('y',H-8);
+      t.setAttribute('text-anchor','middle');t.setAttribute('fill','#6d7887');t.setAttribute('font-size','8');t.setAttribute('font-family','JetBrains Mono, monospace');
+      t.textContent=i;svg.appendChild(t);
+    });
+    // moving marker
+    var mk=document.createElementNS(NS,'circle');mk.setAttribute('r','5');mk.setAttribute('fill','#4ea3a8');mk.setAttribute('stroke','#0f1620');mk.setAttribute('stroke-width','2');svg.appendChild(mk);
+    var vline=document.createElementNS(NS,'line');vline.setAttribute('stroke','rgba(78,163,168,.4)');vline.setAttribute('stroke-width','1');svg.appendChild(vline);
+    var resp=document.getElementById('irfResp'), moK=document.getElementById('irfMoK'), mo=document.getElementById('irfMo');
+    function upd(i){
+      var v=Y[i];
+      mk.setAttribute('cx',X(i));mk.setAttribute('cy',Yc(v));
+      vline.setAttribute('x1',X(i));vline.setAttribute('x2',X(i));vline.setAttribute('y1',padT);vline.setAttribute('y2',H-padB);
+      resp.textContent=(v>=0?'+':'')+v.toFixed(2);
+      moK.textContent=i; mo.textContent='Month '+i;
+    }
+    range.addEventListener('input',function(){ upd(+range.value); });
+    upd(1);
   })();
 </script>
 <div class="pop" id="pop" role="dialog" aria-label="Message for recruiters">
