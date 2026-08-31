@@ -520,7 +520,7 @@
 <section id="casestudy">
   <div class="wrap">
     <div class="head reveal"><h2>Selected <em>work samples</em></h2></div>
-    <p class="subhead reveal">Four deliverables I built end to end — a sourced streaming price panel, a private-credit underwriting, a cross-country box-office regression study, and a macro time-series analysis. Each with the model, the write-up, and something you can explore below.</p>
+    <p class="subhead reveal">Five deliverables I built end to end — a sourced streaming price panel, a private-credit underwriting, a cross-country box-office regression study, a macro time-series analysis, and a title-level valuation of a film package for streaming acquisition. Each with the model, the write-up, and something you can explore below.</p>
 
     <div class="cs-item">
     <div class="cs-kicker reveal"><b>01</b> &middot; Subscription &amp; Pricing Analytics</div>
@@ -767,6 +767,184 @@
       <p class="cs-lead note" style="margin-top:22px">Response path reconstructed from the VAR impulse-response function. Analytical work sample.</p>
     </div>
     </div>
+
+<style>
+  .nf-verdict{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px;margin-top:14px;
+    border:1px solid var(--line);border-radius:8px;font-family:"JetBrains Mono",monospace;font-size:.64rem;
+    letter-spacing:.03em;line-height:1.4}
+  .nf-verdict .vk{color:var(--mute);text-transform:uppercase;font-size:.58rem}
+  .nf-verdict .vv{text-align:right}
+  .nf-verdict[data-tone="good"]{border-color:rgba(127,185,138,.42)} .nf-verdict[data-tone="good"] .vv{color:var(--up)}
+  .nf-verdict[data-tone="warn"]{border-color:rgba(201,162,74,.42)}  .nf-verdict[data-tone="warn"] .vv{color:var(--gold)}
+  .nf-verdict[data-tone="bad"]{border-color:rgba(201,106,74,.45)}   .nf-verdict[data-tone="bad"] .vv{color:#c96a4a}
+  .nf-neg{color:#c96a4a !important}
+  .nf-ttl{margin-top:18px;border-top:1px solid var(--line)}
+  .nf-ttl .r{display:grid;grid-template-columns:1fr 62px 66px;gap:8px;padding:7px 0;border-bottom:1px solid var(--line);
+    font-family:"JetBrains Mono",monospace;font-size:.66rem;color:var(--soft);align-items:center}
+  .nf-ttl .r.h{color:var(--mute);font-size:.58rem;text-transform:uppercase;letter-spacing:.05em}
+  .nf-ttl .r span:not(:first-child){text-align:right}
+  .nf-ttl .r.loss{color:var(--dim)} .nf-ttl .r.loss b{color:#c96a4a;font-weight:400}
+  .nf-ttl .r b{color:var(--paper);font-weight:400}
+</style>
+
+    <div class="cs-item">
+    <div class="cs-kicker reveal"><b>05</b> &middot; Content Acquisition &amp; Valuation</div>
+    <div class="cs-grid">
+      <div class="cs-lead reveal">
+        <div class="cs-flag">AVOD Acquisitions &middot; Title-Level Valuation</div>
+        <div class="deal">Project Nightfall: Valuing a Five-Film Package for AVOD</div>
+        <div class="sub">5 titles &middot; 24-month U.S. exclusive &middot; 3 deal structures &middot; 14 reconciliation controls</div>
+        <p>A distributor offers five action and thriller features for a 24-month exclusive U.S. AVOD licence and asks <b>$2.50M</b>. The buy-side question is not whether the films will be watched. It is how much of that viewing is <b>incremental</b> to the platform, what the inventory actually sells for, and how fast it decays. I built the model to answer those three, then priced the deal off them.</p>
+        <p>The package supports <b>$2.01M</b> in the base case, so the ask sits <b>24% above</b> the ceiling and only the upside scenario clears it, by $0.14M. Two titles carry <b>79%</b> of contribution and two fail to cover their allocated fee. My recommendation was to acquire only if repriced or restructured: open at $850K plus earn-outs tied to viewing thresholds, target $1.50M, walk at $2.01M. The earn-out absorbs <b>90%</b> of the fixed-fee downside exposure for the same expected cost.</p>
+        <div class="cs-tags"><span>Incrementality</span><span>NPV &amp; bid ceiling</span><span>Deal structuring</span><span>Scenario &amp; sensitivity</span><span>Reconciliation controls</span><span>Excel</span></div>
+        <p class="note">Independent analytical case study. Every assumption is synthetic and constructed for the exercise; none is observed market data or proprietary company information. Present values discounted at a 12% annual required return. Retention and audience acquisition are deliberately excluded to avoid double counting the same viewing hour.</p>
+        <div class="cs-downloads">
+          <a class="csbtn" href="nightfall-investment-memo.pdf" target="_blank" rel="noopener">Read the memo <span class="ext">PDF &middot; 13pp</span></a>
+          <a class="csbtn" href="nightfall-valuation-model.xlsx" download>Download the model <span class="ext">XLSX</span></a>
+        </div>
+      </div>
+      <div class="cs-metrics reveal">
+        <div class="mrow">
+          <div class="m"><div class="mv">$2.01M</div><div class="mk">Bid ceiling &middot; base case</div></div>
+          <div class="m"><div class="mv">+24%</div><div class="mk">Ask above that ceiling</div></div>
+          <div class="m"><div class="mv">79%</div><div class="mk">Contribution from two titles</div></div>
+          <div class="m"><div class="mv">Mo. 6</div><div class="mk">Payback, preferred structure</div></div>
+        </div>
+        <div class="cs-rec"><span class="lab">Recommendation</span><span class="val">Reprice or restructure</span></div>
+        <div class="cs-rec" style="border-top:1px solid var(--line)"><span class="lab">Preferred structure</span><span class="val">Fee plus earn-outs</span></div>
+      </div>
+    </div>
+
+    <div class="sv reveal">
+      <div class="sv-head">
+        <h3>Find the fee where this deal <em>stops working</em></h3>
+        <span class="hint">Drag the licence fee &rarr;</span>
+      </div>
+      <p class="sv-sub">The whole negotiation reduces to one number: the most you can pay and still earn your required return. Drag the fee and switch scenarios. The curves are net present value across the 24-month term; where each one crosses zero is that scenario's walk-away price.</p>
+      <div class="sv-presets" role="group" aria-label="Scenario">
+        <button type="button" data-nfs="down">Downside</button>
+        <button type="button" data-nfs="base" aria-pressed="true">Base</button>
+        <button type="button" data-nfs="up">Upside</button>
+      </div>
+      <div class="sv-wrap">
+        <div>
+          <div class="sv-chart">
+            <div class="sv-key">
+              <span><i style="background:var(--gold)"></i>Downside</span>
+              <span><i style="background:var(--accent)"></i>Base</span>
+              <span><i style="background:var(--up)"></i>Upside</span>
+            </div>
+            <svg id="nfSvg" viewBox="0 0 460 186" preserveAspectRatio="none" role="img" aria-label="Net present value against licence fee, three scenarios"></svg>
+          </div>
+          <div class="sv-slider">
+            <input type="range" id="nfRange" min="0.80" max="2.80" step="0.01" value="1.50" aria-label="Licence fee in millions of dollars">
+            <span class="yr" id="nfFeeLab">$1.50M</span>
+          </div>
+        </div>
+        <div class="sv-bill">
+          <div class="pt">At a fee of <span id="nfFeeK">$1.50M</span></div>
+          <div class="sv-total" id="nfNpv">$496K</div>
+          <div class="sv-totk">Net present value &middot; <span id="nfScenK">base case</span></div>
+          <div class="prow"><span class="l">Return on invested cost</span><span class="v" id="nfRoi">19.9%</span></div>
+          <div class="prow"><span class="l">Bid ceiling, this case</span><span class="v" id="nfCeil">$2.01M</span></div>
+          <div class="prow"><span class="l">Headroom under the ask</span><span class="v" id="nfHead">$1.00M</span></div>
+          <div class="prow gap"><span class="l">Cost of the fee, in PV</span><span class="v" id="nfPvf">$1.45M</span></div>
+          <div class="nf-verdict" id="nfVerdict" data-tone="good"><span class="vk">Verdict</span><span class="vv" id="nfVerdictText">Clears every scenario</span></div>
+          <div class="nf-ttl" id="nfTtl"></div>
+          <p class="sv-foot">Seller ask <b>$2.50M</b>. Recommended target <b>$1.50M</b>. Fee paid 50% on delivery and 50% at month 7, so a dollar of fee costs <b>96.4&cent;</b> in present value.</p>
+        </div>
+      </div>
+      <p class="cs-lead note" style="margin-top:22px">Curves are read from the delivered workbook: contribution before licence fee, less the present value of the fee, discounted monthly at 12% a year. Title contributions are shown at the recommended $1.50M fee and are allocated on the negotiated share, not on contribution.</p>
+    </div>
+    </div>
+
+<script>
+(function(){
+  var svg=document.getElementById('nfSvg'); if(!svg) return;
+  var rng=document.getElementById('nfRange');
+  // PV of contribution before licence fee, by scenario ($M). Reconciled to the delivered workbook.
+  var C={down:1.461, base:1.942, up:2.547};
+  var PVF=0.964;   // PV of $1 of fee, paid 50% on delivery and 50% at month 7
+  var SUP=1.05;    // PV of marketing, delivery, QC and serving costs
+  var NAME={down:'downside case', base:'base case', up:'upside case'};
+  var COL={down:'var(--gold)', base:'var(--accent)', up:'var(--up)'};
+  // Title contribution after fee at the $1.50M target, base case ($K).
+  var TITLES=[['Nightfall Protocol',5.89,572],['Ash Ridge',4.31,236],['Cold Harbor',3.13,63],
+              ['The Quiet Depth',1.97,-83],['Vector Nine',0.68,-174]];
+  var scen='base';
+
+  var F0=0.80,F1=2.80,Y1=1.90,Y0=-1.40,W=460,H=186,L=8,R=8,T=10,B=24;
+  function x(f){return L+(f-F0)/(F1-F0)*(W-L-R);}
+  function y(v){return T+(Y1-v)/(Y1-Y0)*(H-T-B);}
+  function npv(f,s){return C[s]-PVF*f;}
+  function roi(f,s){return npv(f,s)/(SUP+PVF*f);}
+  function ceil(s){return C[s]/PVF;}
+  function money(m){var a=Math.abs(m);var s=a>=1?'$'+a.toFixed(2)+'M':'$'+Math.round(a*1000)+'K';return (m<0?'-':'')+s;}
+
+  function drawStatic(){
+    var p='';
+    p+='<line x1="'+L+'" y1="'+y(0)+'" x2="'+(W-R)+'" y2="'+y(0)+'" stroke="rgba(174,184,196,.28)" stroke-width="1"/>';
+    [[1.50,'target'],[2.50,'ask']].forEach(function(m){
+      p+='<line x1="'+x(m[0])+'" y1="'+T+'" x2="'+x(m[0])+'" y2="'+(H-B)+'" stroke="rgba(174,184,196,.20)" stroke-width="1" stroke-dasharray="3 4"/>';
+      p+='<text x="'+(x(m[0])+5)+'" y="'+(T+11)+'" fill="#6d7887" font-family="JetBrains Mono, monospace" font-size="8">'+m[1]+'</text>';
+    });
+    ['down','base','up'].forEach(function(s){
+      var d='',n=60;
+      for(var i=0;i<=n;i++){var f=F0+(F1-F0)*i/n; d+=(i?'L':'M')+x(f).toFixed(1)+' '+y(npv(f,s)).toFixed(1);}
+      p+='<path d="'+d+'" fill="none" stroke="'+COL[s]+'" stroke-width="'+(s===scen?2:1)+'" opacity="'+(s===scen?1:.34)+'"/>';
+    });
+    [0.80,1.50,2.50,2.80].forEach(function(f){
+      p+='<text x="'+x(f)+'" y="'+(H-7)+'" fill="#6d7887" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">$'+f.toFixed(2)+'M</text>';
+    });
+    p+='<g id="nfMark"></g>';
+    svg.innerHTML=p;
+  }
+  function drawMark(f){
+    var g=document.getElementById('nfMark'); if(!g) return;
+    var v=npv(f,scen);
+    g.innerHTML='<line x1="'+x(f)+'" y1="'+T+'" x2="'+x(f)+'" y2="'+(H-B)+'" stroke="var(--paper)" stroke-width="1" opacity=".45"/>'
+      +'<circle cx="'+x(f)+'" cy="'+y(v)+'" r="4" fill="'+(v>=0?COL[scen]:'#c96a4a')+'"/>';
+  }
+  function titles(){
+    var h='<div class="r h"><span>Title, base case at $1.50M</span><span>Hours</span><span>After fee</span></div>';
+    TITLES.forEach(function(t){
+      h+='<div class="r'+(t[2]<0?' loss':'')+'"><span>'+t[0]+'</span><span>'+t[1].toFixed(2)+'M</span><span><b>'+(t[2]<0?'-$'+Math.abs(t[2]):'$'+t[2])+'K</b></span></div>';
+    });
+    document.getElementById('nfTtl').innerHTML=h;
+  }
+  function render(){
+    var f=parseFloat(rng.value), v=npv(f,scen), r=roi(f,scen), c=ceil(scen);
+    document.getElementById('nfFeeLab').textContent=money(f);
+    document.getElementById('nfFeeK').textContent=money(f);
+    var np=document.getElementById('nfNpv');
+    np.textContent=(v<0?'-':'')+money(Math.abs(v)).replace('-','');
+    np.classList.toggle('nf-neg',v<0);
+    document.getElementById('nfScenK').textContent=NAME[scen];
+    document.getElementById('nfRoi').textContent=(r*100).toFixed(1)+'%';
+    document.getElementById('nfCeil').textContent=money(c);
+    document.getElementById('nfHead').textContent=money(2.50-f);
+    document.getElementById('nfPvf').textContent=money(PVF*f);
+    var vd=document.getElementById('nfVerdict'), vt=document.getElementById('nfVerdictText'), tone, txt;
+    if(f<=ceil('down')){tone='good'; txt='Clears in every scenario';}
+    else if(f<=ceil('base')){tone='warn'; txt='Clears the base case only';}
+    else if(f<=ceil('up')){tone='warn'; txt='Needs the upside to clear';}
+    else {tone='bad'; txt='Fails in every scenario';}
+    vd.setAttribute('data-tone',tone); vt.textContent=txt;
+    drawMark(f);
+  }
+  rng.addEventListener('input',render);
+  Array.prototype.forEach.call(document.querySelectorAll('[data-nfs]'),function(b){
+    b.addEventListener('click',function(){
+      scen=b.getAttribute('data-nfs');
+      Array.prototype.forEach.call(document.querySelectorAll('[data-nfs]'),function(o){
+        o.setAttribute('aria-pressed', o===b ? 'true':'false');
+      });
+      drawStatic(); render();
+    });
+  });
+  drawStatic(); titles(); render();
+})();
+</script>
 
 
   </div>
